@@ -20,6 +20,26 @@
     ],
     "rules": {
         "no-param-reassign": "off",
-        "import/no-extraneous-dependencies": "off"
+        "import/no-extraneous-dependencies": "off",
+        "react/prefer-stateless-function": "off",
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ],
+        "react/no-unused-state": "warn",
+        "class-methods-use-this": "warn",
+        "react/destructuring-assignment": "off",
+        "react/forbid-prop-types": "off",
+        "no-unused-vars": "warn",
+        "react/no-array-index-key": "warn",
+        "react/no-access-state-in-setstate": "off",
+        "no-shadow": "warn",
+        "arrow-body-style": "off", 
+        "react/function-component-definition": "off"
     }
 }

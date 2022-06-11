@@ -8,11 +8,18 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class IndexController extends AbstractController
 {
-    #[Route('/', name: 'app_index')]
-    public function index(): Response
+    #[Route(
+        '/{reactRouting}',
+        name: 'app_index',
+        priority: -1,
+        defaults: ['reactRouting' => null],
+        requirements: ['reactRouting' => '.+'],
+        methods: ['GET']
+    )]
+    public function index($reactRouting): Response
     {
         return $this->render('index/index.html.twig', [
-            'controller_name' => 'IndexController',
+            'title' => $reactRouting
         ]);
     }
 }
